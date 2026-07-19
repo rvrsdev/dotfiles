@@ -1,0 +1,61 @@
+@define-color black #131515;
+@define-color white #faf9f6;
+@define-color gray #c5c6c7;
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 15pt;
+}
+
+window#waybar {
+  background: @black;       
+  color: @white;           
+  opacity: 1.0;
+/* border-bottom: 2px solid @white; */
+
+}
+
+#backlight,
+#pulseaudio,
+#language,
+#cpu,
+#memory,
+#battery,
+#network,
+#clock {
+    margin-right: 10px;
+    border-right: 2px solid @white;
+}
+
+#clock {
+    border-right: none;
+}
+
+#tray, #language {
+    border-left: 2px solid @white;
+}
+
+#language, #tray {
+}
+
+#workspaces {
+    margin: 5px 5px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  margin: 0 10px;
+  color: @gray;
+}
+
+#workspaces button.active {
+  color: @white;
+  border-bottom: 2px solid @white;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@white, 0.2);
+}
+
+

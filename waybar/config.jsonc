@@ -1,0 +1,62 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["ext/workspaces"],
+  /* "modules-center": ["backlight"], */ 
+  "modules-right": ["tray", "hyprland/language", "cpu", "memory", "pulseaudio", "backlight", "battery", "network", "clock"],
+
+  "ext/workspaces": {
+      "all-outputs": true,
+      "format": "{icon}",
+      "on-click": "activate",
+      "disable-scroll": false,
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "show-passive-items": true,
+    "justify-center": true,
+  },
+
+  "hyprland/language": {
+    "format": " {} ",
+    "format-en": "us",
+    "format-ru": "ru",
+    "format-pl": "pl",
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "cpu {usage}% "
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "ram {used:0.1f}g "
+  },
+
+  "battery": {
+    "format": "bat {capacity}% ",
+  },
+
+  "network": {
+    "format-wifi": "wifi ",
+    "format-ethernet": "eth ",
+    "format-disconnected": "disc ",
+  },
+
+  "pulseaudio": {
+    "format": "vol {volume}% "
+  },
+
+  "backlight": {
+      "format": "brt {percent}% ",
+  },
+
+  "clock": {
+      "interval": 60,
+      "format": "{:%m.%d.%y %I:%M %p}",
+  }
+}
+
