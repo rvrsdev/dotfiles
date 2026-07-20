@@ -1,22 +1,41 @@
 {
-  "layer": "top",
   "position": "top",
 
-  "modules-left": ["ext/workspaces"],
-  /* "modules-center": ["backlight"], */ 
-  "modules-right": ["tray", "hyprland/language", "cpu", "memory", "pulseaudio", "backlight", "battery", "network", "clock"],
+  "margin-top": 10,
+  "margin-bottom": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": [
+    "ext/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "network",
+    "clock"
+  ],
 
   "ext/workspaces": {
-      "all-outputs": true,
-      "format": "{icon}",
-      "on-click": "activate",
-      "disable-scroll": false,
+    "format": "{icon}",
+    "on-click": "activate",
+  },
+
+  "hyprland/window": {
+    "format": " > {initialTitle}",
   },
 
   "tray": {
-    "icon-size": 20,
+    "icon-size": 15,
     "show-passive-items": true,
-    "justify-center": true,
+    "justify-center": true
   },
 
   "hyprland/language": {
@@ -28,35 +47,38 @@
 
   "cpu": {
     "interval": 2,
-    "format": "cpu {usage}% "
+    "format": " cpu {usage}% ",
   },
 
   "memory": {
     "interval": 30,
-    "format": "ram {used:0.1f}g "
+    "format": " ram {used:0.1f}g ",
+    "tooltip": true,
+    "tooltip-format": "ram: {used:0.1f} / {total:0.1f}g"
   },
 
   "battery": {
-    "format": "bat {capacity}% ",
+    "format": " bat {capacity}% ",
   },
 
   "network": {
-    "format-wifi": "wifi ",
-    "format-ethernet": "eth ",
-    "format-disconnected": "disc ",
+    "format-wifi": " wifi ",
+    "format-ethernet": " eth ",
+    "format-disconnected": " disc ",
   },
 
   "pulseaudio": {
-    "format": "vol {volume}% "
+    "format": " vol {volume}% ",
   },
 
   "backlight": {
-      "format": "brt {percent}% ",
+    "format": " brt {percent}% ",
   },
 
   "clock": {
-      "interval": 60,
-      "format": "{:%m.%d.%y %I:%M %p}",
+    "interval": 60,
+    "format": "{:%m.%d.%y %I:%M %p}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %B %d %Y}"
   }
 }
-

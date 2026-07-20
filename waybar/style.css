@@ -1,19 +1,27 @@
-@define-color black #131515;
-@define-color white #faf9f6;
-@define-color gray #c5c6c7;
+@import "colors.css";
+@import "modules/tooltip.css";
+@import "modules/workspaces.css";
 
 * {
   all: unset;
   font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 15pt;
+  font-size: 14px;
+  min-height: 0;
+  font-weight: 500;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.2s ease;
 }
 
 window#waybar {
-  background: @black;       
-  color: @white;           
+  background: @black;
+  color: @white;
   opacity: 1.0;
-/* border-bottom: 2px solid @white; */
 
+  border: 1px solid alpha(@white, 0.35);
+  border-radius: 6px;
 }
 
 #backlight,
@@ -24,38 +32,64 @@ window#waybar {
 #battery,
 #network,
 #clock {
-    margin-right: 10px;
-    border-right: 2px solid @white;
+  border-right: 1px solid alpha(@white, 0.35);
+  padding: 0 8px;
 }
 
 #clock {
-    border-right: none;
+  border-right: none;
 }
 
-#tray, #language {
-    border-left: 2px solid @white;
-}
-
-#language, #tray {
-}
-
-#workspaces {
-    margin: 5px 5px;
-}
-
-#workspaces button {
+#tray,
+#language {
   padding: 0 8px;
-  margin: 0 10px;
-  color: @gray;
+  border-left: 1px solid alpha(@white, 0.35);
 }
 
-#workspaces button.active {
+#backlight,
+#pulseaudio,
+#language,
+#cpu,
+#memory,
+#battery,
+#network,
+#clock,
+#tray {
   color: @white;
-  border-bottom: 2px solid @white;
 }
 
-#workspaces button:hover {
-  background-color: alpha(@white, 0.2);
+#backlight:hover,
+#pulseaudio:hover,
+#language:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#network:hover,
+#clock:hover,
+#tray:hover {
+  background-color: alpha(@white, 0.08);
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 10px;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 10px;
+}
+
+#tray menu {
+  background: @black;
+  border: 1px solid alpha(@white, 0.35);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+#tray menu *:hover,
+#tray menu *:focus {
+  background: alpha(@white, 0.12);
+  color: @highlight;
+  border-radius: 5px;
 }
 
 

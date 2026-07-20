@@ -1,0 +1,15 @@
+tooltip {
+  background: @black;
+  border: 1px solid alpha(@white, 0.35);
+  border-radius: 5px;
+  padding: 4px;
+}
+tooltip label {
+  color: @gray;
+  font-size: 11px;
+}
+
+tooltip .value {
+  color: @highlight;
+  font-weight: 500;
+}
