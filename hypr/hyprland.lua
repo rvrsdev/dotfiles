@@ -10,9 +10,9 @@ hl.monitor({
 ---- MY PROGRAMS ----
 ---------------------
 
--- Set programs that you use
 local terminal  = "kitty"
-local fileManager = "thunar"
+local gui_file_mngr = "thunar"
+local tui_file_mngr = "y"
 local menu = "rofi -show drun"
 local browser = "zen-browser"
 local notif_daemon = "mako"
@@ -29,7 +29,6 @@ hl.on("hyprland.start", function ()
    hl.exec_cmd("waybar")
    hl.exec_cmd(notif_daemon)
    hl.exec_cmd("systemctl --user start hyprpolkitagent")
-   hl.exec_cmd("hyprsunset")
  end)
 
 
@@ -67,18 +66,16 @@ hl.env("QT_STYLE_OVERRIDE", "Darkly")
 
 hl.config({
     general = {
-        gaps_in  = 2,
-        gaps_out = 0,
+        gaps_in  = 3,
+        gaps_out = 5,
 
-        border_size = 2,
+        border_size = 1,
 
         col = {
             active_border   = "#faf9f6",
-            inactive_border = "#131515E6",
+            inactive_border = "#121320",
         },
 
-        -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
 
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
@@ -87,9 +84,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 0,
+        rounding       = 3,
         rounding_power = 2,
-
 
         active_opacity   = 0.9,
         inactive_opacity = 0.8,
@@ -215,10 +211,10 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(gui_file_mngr))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(tui_file_mngr))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
@@ -227,6 +223,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + SHIFT + CTRL + W", hl.dsp.exec_cmd(rnd_wall))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.exec_cmd(waybar_toggle))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprsunset -t 5000 || pkill hyprsunset"))
 
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
