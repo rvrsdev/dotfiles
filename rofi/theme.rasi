@@ -1,0 +1,60 @@
+* {
+    font: "JetBrainsMono Nerd Font 15";
+
+    background-color:  #131515;
+    text-color:        #faf9f6;
+    border-color:      #636564;
+    faded-text-color:  #c5c6c7;
+    normal-background: #131515;
+}
+
+window {
+    background-color:   var(normal-background);
+    location:           center;
+    anchor:             center;
+    width:              640px;
+    border-radius:      10px;
+    border:             1px;
+    border-color:       var(border-color);
+}
+
+inputbar {
+    font:       "JetBrainsMono Nerd Font 14";
+    padding:    16px;
+    spacing:    12px;
+    children:   [ entry ];
+    text-color: var(text-color);
+}
+
+entry {
+    placeholder:        "Search...";
+    placeholder-color:  var(faded-text-color);
+    text-color:         var(text-color);
+}
+
+listview {
+    fixed-height:   false;
+    dynamic:        true;
+    scrollbar:      false;
+    lines:          7;
+    padding:        8px 0px 8px 0px;
+}
+
+element {
+    padding:            10px 16px;
+    spacing:            12px;
+    background-color:   transparent;
+    border-radius:      4px;
+    text-color:         var(faded-text-color);
+    border:             0px 0px 1px 0px;
+    border-color:       #333333;
+}
+
+element selected{ 
+    text-color:          var(text-color);
+}
+
+element-text {
+    text-color:         inherit;
+    vertical-align:     0.5;
+}
