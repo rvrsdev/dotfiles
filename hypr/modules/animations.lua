@@ -1,7 +1,7 @@
 hl.config({
 	general = {
-		gaps_in = 3,
-		gaps_out = 5,
+        gaps_out = 2,
+		gaps_in = 2,
 
 		border_size = 1,
 
@@ -17,11 +17,11 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 3,
-		rounding_power = 2,
+		rounding = 0,
+		rounding_power = 0,
 
 		active_opacity = 1,
-		inactive_opacity = 0.8,
+		inactive_opacity = 1,
 
 		shadow = {
 			enabled = false,
@@ -100,7 +100,7 @@ hl.config({
 
 hl.config({
 	misc = {
-		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
-		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+		force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
+		disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
