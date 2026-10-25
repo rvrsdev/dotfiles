@@ -1,8 +1,9 @@
 local terminal = "kitty"
 local gui_file_mngr = "thunar"
-local tui_file_mngr = "y"
 local menu = "rofi -show drun"
 local browser = "zen-browser"
+local telegram = "Telegram"
+
 
 local waybar_toggle = "pkill -x waybar || waybar"
 local rnd_wall = "waypaper --backend 'awww' --random --folder '/home/rvrs/Pictures/Walls'"
@@ -18,9 +19,9 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(gui_file_mngr))
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(tui_file_mngr))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(telegram))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
