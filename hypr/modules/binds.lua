@@ -3,11 +3,10 @@ local gui_file_mngr = "thunar"
 local menu = "rofi -show drun"
 local browser = "zen-browser"
 local telegram = "Telegram"
-
+local heroic = "/$HOME/Games/Heroic-2.22.4-linux-x64/heroic"
 
 local waybar_toggle = "pkill -x waybar || waybar"
-local rnd_wall = "waypaper --backend 'awww' --random --folder '/home/rvrs/Pictures/Walls'"
-
+local rnd_wall = "waypaper --backend 'awww' --random --folder '/$HOME/Pictures/Walls'"
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
@@ -22,6 +21,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(gui_file_mngr))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(telegram))
+hl.bind(mainMod .. " + ALT + H", hl.dsp.exec_cmd(heroic))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
