@@ -24,6 +24,7 @@ hl.window_rule({
 		pin = false,
 	},
 
+
 	no_focus = true,
 })
 

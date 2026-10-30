@@ -10,7 +10,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Android Sdk variable
-export ANDROID_HOME="$HOME/deve/Android/Sdk"
+export ANDROID_HOME="$HOME/develop/Android/Sdk"
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$HOME/develop/flutter/bin:$PATH"
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"

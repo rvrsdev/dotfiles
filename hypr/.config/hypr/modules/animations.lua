@@ -11,7 +11,7 @@ hl.config({
 		},
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-		allow_tearing = false,
+		allow_tearing = true,
 
 		layout = "dwindle",
 	},
@@ -23,19 +23,9 @@ hl.config({
 		active_opacity = 1,
 		inactive_opacity = 1,
 
-		shadow = {
-			enabled = false,
-			range = 4,
-			render_power = 3,
-			color = 0xee1a1a1a,
-		},
+		shadow = { enabled = false },
 
-		blur = {
-			enabled = false,
-			size = 2,
-			passes = 1,
-			vibrancy = 0.1696,
-		},
+		blur = { enabled = false },
 	},
 
 	animations = {
