@@ -1,6 +1,6 @@
-require("$HOME/dotfiles/hypr/modules/monitors")
+require("modules/monitors")
 require("modules/permissions")
-require("$HOME/dotfiles/hypr/modules/binds")
+require("modules/binds")
 require("modules/autostart")
 require("modules/env")
 require("modules/animations")
