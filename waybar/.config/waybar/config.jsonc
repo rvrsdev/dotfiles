@@ -14,10 +14,12 @@
   "modules-right": [
     "tray",
     "hyprland/language",
+    "custom/nvidia",
     "cpu",
     "memory",
     "pulseaudio",
     "backlight",
+    "power-profiles-daemon",
     "battery",
     "network",
     "clock"
@@ -80,5 +82,22 @@
     "format": "{:%m.%d.%y %I:%M %p}",
     "tooltip": true,
     "tooltip-format": "{:%A, %B %d %Y}"
+  },
+
+  "power-profiles-daemon": {
+    "format": "pwr: {icon}",
+    "tooltip": false,
+    "format-icons": {
+      "performance": "per",
+      "balanced": "bal",
+      "power-saver": "sav"
+    }
+  },
+
+  "custom/nvidia": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/\\1% 🌡️\\2°C/g'",
+      "format": "  gpu {}%",
+      "interval": 2
   }
+
 }

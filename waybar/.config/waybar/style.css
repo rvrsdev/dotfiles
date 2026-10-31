@@ -24,6 +24,7 @@ window#waybar {
 #memory,
 #battery,
 #network,
+#power-profiles-daemon,
 #clock {
   border-right: 1px solid alpha(@white, 0.35);
   padding: 0 8px;
@@ -47,14 +48,13 @@ window#waybar {
 #battery,
 #network,
 #clock,
+#power-profiles-daemon
 #tray {
   color: @white;
 }
 
 #backlight:hover,
 #pulseaudio:hover,
-#language:hover,
-#cpu:hover,
 #memory:hover,
 #battery:hover,
 #network:hover,
