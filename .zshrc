@@ -13,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export ANDROID_HOME="$HOME/develop/Android/Sdk"
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$HOME/develop/flutter/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
 export JAVA_HOME="$HOME/develop/jdk-17.0.20.1+1"
 # Set name of the theme to load --- if set to "random", it will
@@ -125,3 +126,5 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
 }
+
+. "$HOME/.local/bin/env"
