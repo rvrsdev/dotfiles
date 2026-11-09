@@ -6,7 +6,7 @@ local telegram = "Telegram"
 local heroic = "/$HOME/Games/Heroic-2.22.4-linux-x64/heroic"
 local zed = "zeditor"
 local android_studio = "/$HOME/develop/android-studio/bin/studio"
-local museeks = "/$HOME/Music/Museeks_0.23.4_amd64.AppImage"
+local music_player = "harmonoid"
 
 local waybar_toggle = "pkill -x waybar || waybar"
 local rnd_wall = "waypaper --backend 'awww' --random --folder '/$HOME/Pictures/Walls'"
@@ -47,7 +47,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(gui_file_mngr))
 hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd(zed))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd(android_studio))
-hl.bind("ALT + M", hl.dsp.exec_cmd(museeks))
+hl.bind("ALT + M", hl.dsp.exec_cmd(music_player))
 
 
 -- Printscreen
