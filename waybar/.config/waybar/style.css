@@ -14,7 +14,7 @@ window#waybar {
   color: @white;
   opacity: 1.0;
 
-  border-bottom: 1px solid alpha(@white, 0.35);
+  /*border-bottom: 1px solid alpha(@white, 0.35);*/
 }
 
 #backlight,
@@ -26,7 +26,7 @@ window#waybar {
 #network,
 #power-profiles-daemon,
 #clock {
-  border-right: 1px solid alpha(@white, 0.35);
+  /*border-right: 1px solid alpha(@white, 0.35);*/
   padding: 0 8px;
 }
 
@@ -37,7 +37,7 @@ window#waybar {
 #tray,
 #language {
   padding: 0 8px;
-  border-left: 1px solid alpha(@white, 0.35);
+  /*border-left: 1px solid alpha(@white, 0.35);*/
 }
 
 #backlight,
@@ -73,7 +73,7 @@ window#waybar {
 
 #tray menu {
   background: @black;
-  border: 1px solid alpha(@white, 0.35);
+  /*border: 1px solid alpha(@white, 0.35);*/
   border-radius: 5px;
   padding: 4px;
 }
