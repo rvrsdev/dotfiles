@@ -29,10 +29,10 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 
 -- System
-hl.bind(
-	mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+-- hl.bind(
+-- 	mainMod .. " + M",
+-- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+-- )
 hl.bind(mainMod .. " + SHIFT + CTRL + W", hl.dsp.exec_cmd(rnd_wall))
 hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.exec_cmd(waybar_toggle))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprsunset -t 5000 || pkill hyprsunset"))
